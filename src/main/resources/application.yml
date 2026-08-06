@@ -1,0 +1,57 @@
+# ====================================================================================================
+#   공통 환경 설정
+# ====================================================================================================
+
+
+spring:
+  profiles:
+    # 활성화될 프로파일
+    active: dev
+
+  config:
+    # 활성화된 프로파일에 따른 외부 환경 변수 파일 로드
+    import: optional:file:.env.${spring.profiles.active}[.properties]
+
+  application:
+    name: nepia-app
+
+  main:
+    # 애플리케이션 런타임시 배너 출력 비활성화
+    banner-mode: OFF
+
+  # JSON 데이터 변환 규칙
+  jackson:
+    # 날짜 데이터의 서식 지정 시, 사용될 시간대
+    time-zone: Asia/Seoul
+
+
+mybatis:
+  # 마이바티스 설정 파일 경로
+  config-location: classpath:db/sql/mybatis-config.xml
+  # 매퍼 파일에서 매핑타입으로 사용될 클래스의 패키지 등록
+  type-aliases-package: com.suvin.nepia.domain.**
+  # 자체 정의한 타입 핸들러의 패키지 등록
+  type-handlers-package: com.suvin.nepia.global.infra.handler
+  # 매퍼 XML 파일 경로
+  mapper-locations: classpath:db/sql/mappers/*_mapper.xml
+
+
+server:
+  servlet:
+    # HTTP 요청 및 응답의 인코딩 설정
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  # 배포 중단 시 처리 중인 요청 처리 후 종료
+  shutdown: GRACEFUL
+
+
+# 애플리케이션 커스텀 설정
+app:
+  api:
+    version: v1
+    prefix: /api/${app.api.version}
+  format:
+    date: yyyy-MM-dd
+    date-time: yyyy-MM-dd HH:mm:ss

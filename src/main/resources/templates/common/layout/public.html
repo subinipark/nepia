@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title layout:title-pattern="$LAYOUT_TITLE $CONTENT_TITLE">네피아</title>
+    <th:block th:replace="~{common/layout/fragments/headLibs :: headLibs}"/>
+</head>
+<body>
+    <div class="app">
+        <div class="container is-flex-centered">
+            <main class="contents">
+                <th:block layout:fragment="page-content"/>
+            </main>
+        </div>
+    </div>
+    <!-- script section -->
+    <th:block th:replace="~{common/layout/fragments/scripts :: scripts}"/>
+    <th:block layout:fragment="page-script"/>
+</body>

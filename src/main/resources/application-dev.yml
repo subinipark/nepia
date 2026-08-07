@@ -52,3 +52,7 @@ logging:
   level:
     root: info
     com.suvin.nepia: debug
+
+
+server:
+  port: 80

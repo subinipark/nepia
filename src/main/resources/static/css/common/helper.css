@@ -1,0 +1,892 @@
+@charset "UTF-8";
+
+/*!
+ * enter the description about this file...
+ */
+
+
+
+/**
+ *  # 상태 속성
+ */
+:disabled, [disabled] {
+    cursor: not-allowed !important;
+    opacity: var(--opacity-heavy) !important;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+
+/**
+ *  # 디스플레이
+ */
+.is-hidden {
+    display: none !important;
+}
+
+.is-block {
+    display: block !important;
+}
+
+.is-flex {
+    display: flex !important;
+}
+
+.is-inline {
+    display: inline !important;
+}
+
+.is-inline-block {
+    display: inline-block !important;
+}
+
+.is-inline-flex {
+    display: inline-flex !important;
+}
+
+
+
+/**
+ *  # 간격
+ */
+
+/* ==========================================
+    01. 마진
+   ========================================== */
+.is-margin-auto { margin: 0 auto !important; }
+
+/* ---- 전체 ---- */
+.is-margin-all-0 {
+    margin: var(--spacing-none) !important;
+}
+
+.is-margin-all-1 {
+    margin: var(--spacing-3xs) !important;
+}
+
+.is-margin-all-2 {
+    margin: var(--spacing-2xs) !important;
+}
+
+.is-margin-all-3 {
+    margin: var(--spacing-xs) !important;
+}
+
+.is-margin-all-4 {
+    margin: var(--spacing-sm) !important;
+}
+
+.is-margin-all-5 {
+    margin: var(--spacing-md) !important;
+}
+
+.is-margin-all-6 {
+    margin: var(--spacing-lg) !important;
+}
+
+.is-margin-all-7 {
+    margin: var(--spacing-xl) !important;
+}
+
+.is-margin-all-8 {
+    margin: var(--spacing-2xl) !important;
+}
+
+.is-margin-all-9 {
+    margin: var(--spacing-3xl) !important;
+}
+
+/* ---- 상하 ---- */
+.is-margin-v-1 {
+    margin: var(--spacing-3xs) var(--spacing-none) !important;
+}
+
+.is-margin-v-2 {
+    margin: var(--spacing-2xs) var(--spacing-none) !important;
+}
+
+.is-margin-v-3 {
+    margin: var(--spacing-xs) var(--spacing-none) !important;
+}
+
+.is-margin-v-4 {
+    margin: var(--spacing-sm) var(--spacing-none) !important;
+}
+
+.is-margin-v-5 {
+    margin: var(--spacing-md) var(--spacing-none) !important;
+}
+
+.is-margin-v-6 {
+    margin: var(--spacing-lg) var(--spacing-none) !important;
+}
+
+.is-margin-v-7 {
+    margin: var(--spacing-xl) var(--spacing-none) !important;
+}
+
+.is-margin-v-8 {
+    margin: var(--spacing-2xl) var(--spacing-none) !important;
+}
+
+.is-margin-v-9 {
+    margin: var(--spacing-3xl) var(--spacing-none) !important;
+}
+
+
+/* ---- 좌우 ---- */
+.is-margin-h-1 {
+    margin: var(--spacing-3xs) !important;
+}
+
+.is-margin-h-2 {
+    margin: var(--spacing-none) var(--spacing-2xs) !important;
+}
+
+.is-margin-h-3 {
+    margin: var(--spacing-none) var(--spacing-xs) !important;
+}
+
+.is-margin-h-4 {
+    margin: var(--spacing-none) var(--spacing-sm) !important;
+}
+
+.is-margin-h-5 {
+    margin: var(--spacing-none) var(--spacing-md) !important;
+}
+
+.is-margin-h-6 {
+    margin: var(--spacing-none) var(--spacing-lg) !important;
+}
+
+.is-margin-h-7 {
+    margin: var(--spacing-none) var(--spacing-xl) !important;
+}
+
+.is-margin-h-8 {
+    margin: var(--spacing-none) var(--spacing-2xl) !important;
+}
+
+.is-margin-h-9 {
+    margin: var(--spacing-none) var(--spacing-3xl) !important;
+}
+
+/* ---- 상단 ---- */
+.is-margin-top-0 {
+    margin-top: var(--spacing-none) !important;
+}
+
+.is-margin-top-1 {
+    margin-top: var(--spacing-3xs) !important;
+}
+
+.is-margin-top-2 {
+    margin-top: var(--spacing-2xs) !important;
+}
+
+.is-margin-top-3 {
+    margin-top: var(--spacing-xs) !important;
+}
+
+.is-margin-top-4 {
+    margin-top: var(--spacing-sm) !important;
+}
+
+.is-margin-top-5 {
+    margin-top: var(--spacing-md) !important;
+}
+
+.is-margin-top-6 {
+    margin-top: var(--spacing-lg) !important;
+}
+
+.is-margin-top-7 {
+    margin-top: var(--spacing-xl) !important;
+}
+
+.is-margin-top-8 {
+    margin-top: var(--spacing-2xl) !important;
+}
+
+.is-margin-top-9 {
+    margin-top: var(--spacing-3xl) !important;
+}
+
+/* ---- 우측 ---- */
+.is-margin-right-0 {
+    margin-right: var(--spacing-none) !important;
+}
+
+.is-margin-right-1 {
+    margin-right: var(--spacing-3xs) !important;
+}
+
+.is-margin-right-2 {
+    margin-right: var(--spacing-2xs) !important;
+}
+
+.is-margin-right-3 {
+    margin-right: var(--spacing-xs) !important;
+}
+
+.is-margin-right-4 {
+    margin-right: var(--spacing-sm) !important;
+}
+
+.is-margin-right-5 {
+    margin-right: var(--spacing-md) !important;
+}
+
+.is-margin-right-6 {
+    margin-right: var(--spacing-lg) !important;
+}
+
+.is-margin-right-7 {
+    margin-right: var(--spacing-xl) !important;
+}
+
+.is-margin-right-8 {
+    margin-right: var(--spacing-2xl) !important;
+}
+
+.is-margin-right-9 {
+    margin-right: var(--spacing-3xl) !important;
+}
+
+/* ---- 하단 ---- */
+.is-margin-bottom-0 {
+    margin-bottom: var(--spacing-none) !important;
+}
+
+.is-margin-bottom-1 {
+    margin-bottom: var(--spacing-3xs) !important;
+}
+
+.is-margin-bottom-2 {
+    margin-bottom: var(--spacing-2xs) !important;
+}
+
+.is-margin-bottom-3 {
+    margin-bottom: var(--spacing-xs) !important;
+}
+
+.is-margin-bottom-4 {
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+.is-margin-bottom-5 {
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.is-margin-bottom-6 {
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.is-margin-bottom-7 {
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+.is-margin-bottom-8 {
+    margin-bottom: var(--spacing-2xl) !important;
+}
+
+.is-margin-bottom-9 {
+    margin-bottom: var(--spacing-3xl) !important;
+}
+
+/* ---- 좌측 ---- */
+.is-margin-left-0 {
+    margin-left: var(--spacing-none) !important;
+}
+
+.is-margin-left-1 {
+    margin-left: var(--spacing-3xs) !important;
+}
+
+.is-margin-left-2 {
+    margin-left: var(--spacing-2xs) !important;
+}
+
+.is-margin-left-3 {
+    margin-left: var(--spacing-xs) !important;
+}
+
+.is-margin-left-4 {
+    margin-left: var(--spacing-sm) !important;
+}
+
+.is-margin-left-5 {
+    margin-left: var(--spacing-md) !important;
+}
+
+.is-margin-left-6 {
+    margin-left: var(--spacing-lg) !important;
+}
+
+.is-margin-left-7 {
+    margin-left: var(--spacing-xl) !important;
+}
+
+.is-margin-left-8 {
+    margin-left: var(--spacing-2xl) !important;
+}
+
+.is-margin-left-9 {
+    margin-left: var(--spacing-3xl) !important;
+}
+
+
+/* ==========================================
+    02. 패딩
+   ========================================== */
+/* ---- 전체 ---- */
+.is-padding-all-0 {
+    padding: var(--spacing-none) !important;
+}
+
+.is-padding-all-1 {
+    padding: var(--spacing-3xs) !important;
+}
+
+.is-padding-all-2 {
+    padding: var(--spacing-2xs) !important;
+}
+
+.is-padding-all-3 {
+    padding: var(--spacing-xs) !important;
+}
+
+.is-padding-all-4 {
+    padding: var(--spacing-sm) !important;
+}
+
+.is-padding-all-5 {
+    padding: var(--spacing-md) !important;
+}
+
+.is-padding-all-6 {
+    padding: var(--spacing-lg) !important;
+}
+
+.is-padding-all-7 {
+    padding: var(--spacing-xl) !important;
+}
+
+.is-padding-all-8 {
+    padding: var(--spacing-2xs) !important;
+}
+
+.is-padding-all-9 {
+    padding: var(--spacing-3xs) !important;
+}
+
+/* ---- 상하 ---- */
+.is-padding-v-1 {
+    padding: var(--spacing-3xs) var(--spacing-none) !important;
+}
+
+.is-padding-v-2 {
+    padding: var(--spacing-2xs) var(--spacing-none) !important;
+}
+
+.is-padding-v-3 {
+    padding: var(--spacing-xs) var(--spacing-none) !important;
+}
+
+.is-padding-v-4 {
+    padding: var(--spacing-sm) var(--spacing-none) !important;
+}
+
+.is-padding-v-5 {
+    padding: var(--spacing-md) var(--spacing-none) !important;
+}
+
+.is-padding-v-6 {
+    padding: var(--spacing-lg) var(--spacing-none) !important;
+}
+
+.is-padding-v-7 {
+    padding: var(--spacing-xl) var(--spacing-none) !important;
+}
+
+.is-padding-v-8 {
+    padding: var(--spacing-2xl) var(--spacing-none) !important;
+}
+
+.is-padding-v-9 {
+    padding: var(--spacing-3xl) var(--spacing-none) !important;
+}
+
+/* ---- 좌우 ---- */
+.is-padding-h-1 {
+    padding: var(--spacing-3xs) !important;
+}
+
+.is-padding-h-2 {
+    padding: var(--spacing-none) var(--spacing-2xs) !important;
+}
+
+.is-padding-h-3 {
+    padding: var(--spacing-none) var(--spacing-xs) !important;
+}
+
+.is-padding-h-4 {
+    padding: var(--spacing-none) var(--spacing-sm) !important;
+}
+
+.is-padding-h-5 {
+    padding: var(--spacing-none) var(--spacing-md) !important;
+}
+
+.is-padding-h-6 {
+    padding: var(--spacing-none) var(--spacing-lg) !important;
+}
+
+.is-padding-h-7 {
+    padding: var(--spacing-none) var(--spacing-xl) !important;
+}
+
+.is-padding-h-8 {
+    padding: var(--spacing-none) var(--spacing-2xl) !important;
+}
+
+.is-padding-h-9 {
+    padding: var(--spacing-none) var(--spacing-3xl) !important;
+}
+
+/* ---- 상단 ---- */
+.is-padding-top-0 {
+    padding-top: var(--spacing-none) !important;
+}
+
+.is-padding-top-1 {
+    padding-top: var(--spacing-3xs) !important;
+}
+
+.is-padding-top-2 {
+    padding-top: var(--spacing-2xs) !important;
+}
+
+.is-padding-top-3 {
+    padding-top: var(--spacing-xs) !important;
+}
+
+.is-padding-top-4 {
+    padding-top: var(--spacing-sm) !important;
+}
+
+.is-padding-top-5 {
+    padding-top: var(--spacing-md) !important;
+}
+
+.is-padding-top-6 {
+    padding-top: var(--spacing-lg) !important;
+}
+
+.is-padding-top-7 {
+    padding-top: var(--spacing-xl) !important;
+}
+
+.is-padding-top-8 {
+    padding-top: var(--spacing-2xl) !important;
+}
+
+.is-padding-top-9 {
+    padding-top: var(--spacing-3xl) !important;
+}
+
+/* ---- 우측 ---- */
+.is-padding-right-0 {
+    padding-right: var(--spacing-none) !important;
+}
+
+.is-padding-right-1 {
+    padding-right: var(--spacing-3xs) !important;
+}
+
+.is-padding-right-2 {
+    padding-right: var(--spacing-2xs) !important;
+}
+
+.is-padding-right-3 {
+    padding-right: var(--spacing-xs) !important;
+}
+
+.is-padding-right-4 {
+    padding-right: var(--spacing-sm) !important;
+}
+
+.is-padding-right-5 {
+    padding-right: var(--spacing-md) !important;
+}
+
+.is-padding-right-6 {
+    padding-right: var(--spacing-lg) !important;
+}
+
+.is-padding-right-7 {
+    padding-right: var(--spacing-xl) !important;
+}
+
+.is-padding-right-8 {
+    padding-right: var(--spacing-2xl) !important;
+}
+
+.is-padding-right-9 {
+    padding-right: var(--spacing-3xl) !important;
+}
+
+/* ---- 하단 ---- */
+.is-padding-bottom-0 {
+    padding-bottom: var(--spacing-none) !important;
+}
+
+.is-padding-bottom-1 {
+    padding-bottom: var(--spacing-3xs) !important;
+}
+
+.is-padding-bottom-2 {
+    padding-bottom: var(--spacing-2xs) !important;
+}
+
+.is-padding-bottom-3 {
+    padding-bottom: var(--spacing-xs) !important;
+}
+
+.is-padding-bottom-4 {
+    padding-bottom: var(--spacing-sm) !important;
+}
+
+.is-padding-bottom-5 {
+    padding-bottom: var(--spacing-md) !important;
+}
+
+.is-padding-bottom-6 {
+    padding-bottom: var(--spacing-lg) !important;
+}
+
+.is-padding-bottom-7 {
+    padding-bottom: var(--spacing-xl) !important;
+}
+
+.is-padding-bottom-8 {
+    padding-bottom: var(--spacing-2xl) !important;
+}
+
+.is-padding-bottom-9 {
+    padding-bottom: var(--spacing-3xl) !important;
+}
+
+/* ---- 좌측 ---- */
+.is-padding-left-0 {
+    padding-left: var(--spacing-none) !important;
+}
+
+.is-padding-left-1 {
+    padding-left: var(--spacing-3xs) !important;
+}
+
+.is-padding-left-2 {
+    padding-left: var(--spacing-2xs) !important;
+}
+
+.is-padding-left-3 {
+    padding-left: var(--spacing-xs) !important;
+}
+
+.is-padding-left-4 {
+    padding-left: var(--spacing-sm) !important;
+}
+
+.is-padding-left-5 {
+    padding-left: var(--spacing-md) !important;
+}
+
+.is-padding-left-6 {
+    padding-left: var(--spacing-lg) !important;
+}
+
+.is-padding-left-7 {
+    padding-left: var(--spacing-xl) !important;
+}
+
+.is-padding-left-8 {
+    padding-left: var(--spacing-2xl) !important;
+}
+
+.is-padding-left-9 {
+    padding-left: var(--spacing-3xl) !important;
+}
+
+
+
+/**
+ *  # 플렉스
+ */
+
+/* ==========================================
+    01. 내부 아이템 배치
+   ========================================== */
+.is-flex-direction-col {
+    flex-direction: column !important;
+}
+
+.is-flex-direction-row {
+    flex-direction: row !important;
+}
+
+
+/* ==========================================
+    02. 메인 정렬 축
+   ========================================== */
+.is-justify-content-flex-start {
+    justify-content: flex-start !important;
+}
+
+.is-justify-content-flex-end {
+    justify-content: flex-end !important;
+}
+
+.is-justify-content-center {
+    justify-content: center !important;
+}
+
+.is-justify-content-space-around {
+    justify-content: space-around !important;
+}
+
+.is-justify-content-space-between {
+    justify-content: space-between !important;
+}
+
+
+/* ==========================================
+    03. 교차 정렬 축
+   ========================================== */
+.is-align-items-flex-start {
+    align-items: flex-start !important;
+}
+
+.is-align-items-flex-end {
+    align-items: flex-end !important;
+}
+
+.is-align-items-center {
+    align-items: center !important;
+}
+
+
+/* ==========================================
+    04. 정중앙 정렬
+   ========================================== */
+.is-flex-centered {
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+
+/* ==========================================
+    05. 갭
+   ========================================== */
+/* ---- 전체 ---- */
+.is-gap-all-0 {
+    gap: var(--spacing-none) !important;
+}
+
+.is-gap-all-1 {
+    gap: var(--spacing-3xs) !important;
+}
+
+.is-gap-all-2 {
+    gap: var(--spacing-2xs) !important;
+}
+
+.is-gap-all-3 {
+    gap: var(--spacing-xs) !important;
+}
+
+.is-gap-all-4 {
+    gap: var(--spacing-sm) !important;
+}
+
+.is-gap-all-5 {
+    gap: var(--spacing-md) !important;
+}
+
+.is-gap-all-6 {
+    gap: var(--spacing-lg) !important;
+}
+
+.is-gap-all-7 {
+    gap: var(--spacing-xl) !important;
+}
+
+.is-gap-all-8 {
+    gap: var(--spacing-2xl) !important;
+}
+
+.is-gap-all-9 {
+    gap: var(--spacing-3xl) !important;
+}
+
+/* ---- 상하 ---- */
+.is-gap-v-1 {
+    gap: var(--spacing-3xs) var(--spacing-none) !important;
+}
+
+.is-gap-v-2 {
+    gap: var(--spacing-2xs) var(--spacing-none) !important;
+}
+
+.is-gap-v-3 {
+    gap: var(--spacing-xs) var(--spacing-none) !important;
+}
+
+.is-gap-v-4 {
+    gap: var(--spacing-sm) var(--spacing-none) !important;
+}
+
+.is-gap-v-5 {
+    gap: var(--spacing-md) var(--spacing-none) !important;
+}
+
+.is-gap-v-6 {
+    gap: var(--spacing-lg) var(--spacing-none) !important;
+}
+
+.is-gap-v-7 {
+    gap: var(--spacing-xl) var(--spacing-none) !important;
+}
+
+.is-gap-v-8 {
+    gap: var(--spacing-2xl) var(--spacing-none) !important;
+}
+
+.is-gap-v-9 {
+    gap: var(--spacing-3xl) var(--spacing-none) !important;
+}
+
+/* ---- 좌우 ---- */
+.is-gap-h-1 {
+    gap: var(--spacing-none) var(--spacing-3xs) !important;
+}
+
+.is-gap-h-2 {
+    gap: var(--spacing-none) var(--spacing-2xs) !important;
+}
+
+.is-gap-h-3 {
+    gap: var(--spacing-none) var(--spacing-xs) !important;
+}
+
+.is-gap-h-4 {
+    gap: var(--spacing-none) var(--spacing-sm) !important;
+}
+
+.is-gap-h-5 {
+    gap: var(--spacing-none) var(--spacing-md) !important;
+}
+
+.is-gap-h-6 {
+    gap: var(--spacing-none) var(--spacing-lg) !important;
+}
+
+.is-gap-h-7 {
+    gap: var(--spacing-none) var(--spacing-xl) !important;
+}
+
+.is-gap-h-8 {
+    gap: var(--spacing-none) var(--spacing-2xl) !important;
+}
+
+.is-gap-h-9 {
+    gap: var(--spacing-none) var(--spacing-3xl) !important;
+}
+
+
+
+/**
+ *  # 타이포그래피
+ */
+/* ==========================================
+    01. 정렬
+   ========================================== */
+.has-text-right {
+    text-align: right !important;
+}
+
+.has-text-left {
+    text-align: left !important;
+}
+
+.has-text-centered {
+    text-align: center !important;
+}
+
+.has-text-justified {
+    text-align: justify !important;
+}
+
+
+/* ==========================================
+    02. 크기
+   ========================================== */
+.is-text-xs {
+    font-size: var(--text-xs) !important;
+}
+
+.is-text-sm {
+    font-size: var(--text-sm) !important;
+}
+
+.is-text-md {
+    font-size: var(--text-md) !important;
+}
+
+.is-text-lg {
+    font-size: var(--text-lg) !important;
+}
+
+.is-text-xl {
+    font-size: var(--text-xl) !important;
+}
+
+
+/* ==========================================
+    03. 색상
+   ========================================== */
+.has-text-primary {
+    color: var(--color-primary) !important;
+}
+
+.has-text-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.has-text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+.has-text-emphasis {
+    color: var(--color-text-emphasis) !important;
+}
+
+
+/* ==========================================
+    04. 효과
+   ========================================== */
+.is-underlined-hover:hover {
+    text-decoration: underline !important;
+    transition: var(--duration-fast) !important;
+}
+
+.is-truncated {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}

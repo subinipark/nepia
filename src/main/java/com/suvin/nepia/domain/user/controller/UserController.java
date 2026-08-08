@@ -23,6 +23,6 @@ public class UserController {
      */
     @GetMapping("/sign-up")
     public String signUp() {
-        return "pages/sign-up";
+        return "pages/user/sign-up";
     }
 }

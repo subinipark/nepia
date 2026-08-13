@@ -1,82 +1,133 @@
 @charset "UTF-8";
 
-/*!
- * enter the description about this file...
- */
- 
- 
- 
- 
-/**
- *  # 웹 폰트 글꼴 정의
+/*! 
+ * 파일에 대한 설명
+ *
+ * nepia v1.0 | (c) 2026. suviny All Rights Reserved. | https://github.com/suviny/nepia
  */
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    본문용 글꼴
-   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/**
+ * 01. 웹 폰트
+ */
 @font-face {
     font-family: 'Pretendard';
-    font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: local('Pretendard-Regular'),
-    url("/fonts/Pretendard-Regular.woff2") format("woff2"),
-    url("/fonts/Pretendard-Regular.woff") format("woff");
+    url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Pretendard';
-    font-style: normal;
     font-weight: 500;
     font-display: swap;
     src: local('Pretendard-Medium'),
-    url("/fonts/Pretendard-Medium.woff2") format("woff2"),
-    url("/fonts/Pretendard-Medium.woff") format("woff");
+    url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Pretendard';
-    font-style: normal;
     font-weight: 600;
     font-display: swap;
     src: local('Pretendard-SemiBold'),
-    url("/fonts/Pretendard-SemiBold.woff2") format("woff2"),
-    url("/fonts/Pretendard-SemiBold.woff") format("woff");
+    url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Pretendard';
-    font-style: normal;
     font-weight: 700;
     font-display: swap;
     src: local('Pretendard-Bold'),
-    url("/fonts/Pretendard-Bold.woff2") format("woff2"),
-    url("/fonts/Pretendard-Bold.woff") format("woff");
+    url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
 }
 
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    헤딩용 글꼴
-   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @font-face {
-    font-family: 'Paperlogy';
-    font-style: normal;
+    font-family: 'Paperozi';
     font-weight: 800;
     font-display: swap;
     src: local('Paperlogy-8ExtraBold'),
-    url("/fonts/Paperlogy-8ExtraBold.woff2") format("woff2"),
-    url("/fonts/Paperlogy-8ExtraBold.woff") format("woff");
+    url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
 }
 
 
-
 /**
- *  # 사용자 지정 속성
+ * 02. 전역 디자인 변수
  */
 :root {
-    /* ==========================================
-        01. COLOR PALETTE
-       ========================================== */
+    /* 색상
+     ---------------------------------------------------------------------- */
+    /* 베이직 컬러 */
+    --red-100: #FEE2E2;
+    --red-200: #FECACA;
+    --red-300: #FCA5A5;
+    --red-400: #F87171;
+    --red-500: #EF4444;
+    --red-600: #DC2626;
+
+    --vermilion-100: #FCE7E4;
+    --vermilion-200: #FBD2CD;
+    --vermilion-300: #F7B3AA;
+    --vermilion-400: #F08779;
+    --vermilion-500: #E2513E;
+    --vermilion-600: #D14431;
+
+    --orange-100: #FFEDD5;
+    --orange-200: #FED7AA;
+    --orange-300: #FDBA74;
+    --orange-400: #FB923C;
+    --orange-500: #F97316;
+    --orange-600: #EA580C;
+
+    --yellow-100: #FEF3C7;
+    --yellow-200: #FDE68A;
+    --yellow-300: #FCD34D;
+    --yellow-400: #FBBF24;
+    --yellow-500: #F59E0B;
+    --yellow-600: #D97706;
+
+    --green-100: #D1FAE5;
+    --green-200: #A7F3D0;
+    --green-300: #6EE7B7;
+    --green-400: #34D399;
+    --green-500: #10B981;
+    --green-600: #059669;
+
+    --sky-100: #E0F2FE;
+    --sky-200: #BAE6FD;
+    --sky-300: #7DD3FC;
+    --sky-400: #38BDF8;
+    --sky-500: #0EA5E9;
+    --sky-600: #0284C7;
+
+    --blue-100: #DBEAFE;
+    --blue-200: #BFDBFE;
+    --blue-300: #93C5FD;
+    --blue-400: #60A5FA;
+    --blue-500: #3B82F6;
+    --blue-600: #2563EB;
+
+    --indigo-100: #E0E7FF;
+    --indigo-200: #C7D2FE;
+    --indigo-300: #A5B4FC;
+    --indigo-400: #818CF8;
+    --indigo-500: #6366F1;
+    --indigo-600: #4F46E5;
+
+    --purple-100: #F3E8FF;
+    --purple-200: #E9D5FF;
+    --purple-300: #D8B4FE;
+    --purple-400: #C084FC;
+    --purple-500: #A855F7;
+    --purple-600: #9333EA;
+
+    --slate-50: #F8FAFC;
+    --slate-100: #F1F5F9;
+    --slate-200: #E2E8F0;
+    --slate-300: #CBD5E1;
+    --slate-400: #94A3B8;
+    --slate-500: #64748B;
+    --slate-600: #475569;
+
     --white: #FFFFFF;
     --gray-50: #F9FAFB;
     --gray-100: #F3F4F6;
@@ -89,128 +140,43 @@
     --gray-800: #1F2937;
     --gray-900: #111827;
     --gray-950: #030712;
-    --black: #262627;
+    --black: #2A2A2D;
 
-    --slate-50: #F8FAFC;
-    --slate-100: #F1F5F9;
-    --slate-200: #E2E8F0;
-    --slate-300: #CBD5E1;
-    --slate-400: #94A3B8;
-    --slate-500: #64748B;
-    --slate-600: #475569;
-
-    --red-100: #FEE2E2;
-    --red-200:#FECACA;
-    --red-300:#FCA5A5;
-    --red-400:#F87171;
-    --red-500:#EF4444;
-    --red-600:#DC2626;
-
-    --bittersweet-100: #FFE4E1;
-    --bittersweet-200: #FFCEC8;
-    --bittersweet-300: #FFABA1;
-    --bittersweet-400: #FE6F5E;
-    --bittersweet-500: #F7503C;
-    --bittersweet-600: #E4331E;
-
-    --orange-100:#FFEDD5;
-    --orange-200:#FED7AA;
-    --orange-300:#FDBA74;
-    --orange-400:#FB923C;
-    --orange-500:#F97316;
-    --orange-600:#EA580C;
-
-    --yellow-100:#FEF3C7;
-    --yellow-200:#FDE68A;
-    --yellow-300:#FCD34D;
-    --yellow-400:#FBBF24;
-    --yellow-500:#F59E0B;
-    --yellow-600:#D97706;
-
-    --green-100:#D1FAE5;
-    --green-200:#A7F3D0;
-    --green-300:#6EE7B7;
-    --green-400:#34D399;
-    --green-500:#10B981;
-    --green-600:#059669;
-
-    --sky-100:#E0F2FE;
-    --sky-200:#BAE6FD;
-    --sky-300:#7DD3FC;
-    --sky-400:#38BDF8;
-    --sky-500:#0EA5E9;
-    --sky-600:#0284C7;
-
-    --blue-100:#DBEAFE;
-    --blue-200:#BFDBFE;
-    --blue-300:#93C5FD;
-    --blue-400:#60A5FA;
-    --blue-500:#3B82F6;
-    --blue-600:#2563EB;
-
-    --indigo-100:#E0E7FF;
-    --indigo-200:#C7D2FE;
-    --indigo-300:#A5B4FC;
-    --indigo-400:#818CF8;
-    --indigo-500:#6366F1;
-    --indigo-600:#4F46E5;
-
-    --purple-100:#F3E8FF;
-    --purple-200:#E9D5FF;
-    --purple-300:#D8B4FE;
-    --purple-400:#C084FC;
-    --purple-500:#A855F7;
-    --purple-600:#9333EA;
-
-
+    /* 시맨틱 컬러 */
     --color-primary-subtle: var(--indigo-100);
     --color-primary-light: var(--indigo-200);
-    --color-primary-muted: var(--indigo-300);
-    --color-primary: var(--indigo-400);
-    --color-primary-medium: var(--indigo-500);
+    --color-primary: var(--indigo-500);
     --color-primary-dark: var(--indigo-600);
 
-    --color-secondary-subtle: var(--bittersweet-100);
-    --color-secondary-light: var(--bittersweet-200);
-    --color-secondary-muted: var(--bittersweet-300);
-    --color-secondary: var(--bittersweet-400);
-    --color-secondary-medium: var(--bittersweet-500);
-    --color-secondary-dark: var(--bittersweet-600);
+    --color-secondary-subtle: var(--vermilion-100);
+    --color-secondary-light: var(--vermilion-200);
+    --color-secondary: var(--vermilion-500);
+    --color-secondary-dark: var(--vermilion-600);
 
-    --color-succcess: var(--green-400);
+    --color-success: var(--green-400);
     --color-warning: var(--yellow-400);
     --color-danger: var(--red-400);
+    --color-emphasis: var(--blue-600);
 
-    --color-border: var(--gray-300);
-    --color-border-hover: var(--gray-600);
-    --color-border-focus: var(--color-primary-medium);
-
+    --color-border: var(--slate-300);
     --color-background: var(--slate-50);
-    --color-background-subtle: var(--gray-100);
-    --color-background-light: var(--slate-200);
-    --color-background-muted: var(--slate-300);
-    --color-background-content: var(--white);
-    --color-background-overlay: var(--gray-800);
+    --color-background-light: var(--white);
+    --color-background-dark: var(--gray-900);
 
-    --color-text: var(--black);
+    --color-text: var(--gray-700);
     --color-text-on: var(--white);
-    --color-text-strong: var(--gray-700);
+    --color-text-strong:var(--black);
     --color-text-muted: var(--gray-500);
-    --color-text-help: var(--slate-400);
-    --color-text-emphasis: var(--blue-500);
-    --color-text-emphasis-hover: var(--blue-600);
 
-    --color-icon: var(--slate-500);
+    --color-icon: var(--slate-400);
     --color-icon-on: var(--white);
 
 
-
-    /* ==========================================
-        02. TYPOGRAPHY
-       ========================================== */
-    --font-family-fallback: system-ui, -apple-system, sans-serif;
-    --font-family-body: 'Pretendard', var(--font-family-fallback);
-    --font-family-heading: 'Paperlogy', var(--font-family-fallback);
+    /* 타이포그래피
+     ---------------------------------------------------------------------- */
+    --font-family-fallback: system-ui, -apple-system, "Segoe UI", sans-serif;;
+    --font-family-primary: 'Pretendard', var(--font-family-fallback);
+    --font-family-secondary: 'Paperozi', var(--font-family-fallback);
     --font-family-icon: 'fontello';
 
     --font-weight-regular: 400;
@@ -219,203 +185,222 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
 
-    --text-base-size: 14px;
+    --text-size-base: 14px;
+    --text-size-xs: 10px;
+    --text-size-sm: 12px;
+    --text-size-md: 18px;
+    --text-size-lg: 22px;
+    --text-size-xl: 26px;
 
-    --text-xs: 10px;
-    --text-sm: 12px;
-    --text-md: 16px;
-    --text-lg: 22px;
-    --text-xl: 30px;
+    --letter-spacing-tighter: -0.05em;
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0em;
+    --letter-spacing-wide: 0.025em;
+    --letter-spacing-wider: 0.05em;
 
-    --letter-spacing-tighter: -0.05em;  /* 메인 배너 문구 또는 헤드라인 */
-    --letter-spacing-tight: -0.025em;   /* 타이틀과 서브 타이블 */
-    --letter-spacing-normal: 0em;       /* 본문 */
-    --letter-spacing-wide: 0.025em;     /* 영문 또는 상단 전역 네비게이션 바 메뉴 */
-    --letter-spacing-wider: 0.05em;     /* 작은 글자 및 배지, 태그, 캡션 등 */
-
-    --line-height-none: 1;          /* 폼 요소 및 라벨 또는 한 줄짜리 요소 */
-    --line-height-normal: 1.25;     /* 큰 제목 또는 헤드라인 */
-    --line-height-medium: 1.5;      /* 일반 본문 및 카드 설명 */
-    --line-height-loose: 1.75;      /* 긴 글 문서 (블로그 및 뉴스 등) */
-
-    /* 텍스트 렌더링 버그 및 안티앨리어싱 처리를 위한 트릭 */
-    --text-rendering-fixed: rotate(-0.03deg);
+    --line-height-none: 0;
+    --line-height-sm: 1;
+    --line-height-md: 1.2;
+    --line-height-lg: 1.6;
 
 
-
-    /* ==========================================
-        03. ICON
-       ========================================== */
+    /* 아이콘
+     ---------------------------------------------------------------------- */
     --icon-size-offset: 2px;
-
-    --icon-xs: calc(var(--icon-size-offset) + var(--text-xs));
-    --icon-sm: calc(var(--icon-size-offset) + var(--text-sm));
-    --icon-md: calc(var(--icon-size-offset) + var(--text-md));
-    --icon-lg: calc(var(--icon-size-offset) + var(--text-lg));
-    --icon-xl: calc(var(--icon-size-offset) + var(--text-xl));
-
+    --icon-size-xs: calc(var(--icon-size-offset) + var(--text-size-xs));
+    --icon-size-sm: calc(var(--icon-size-offset) + var(--text-size-sm));
+    --icon-size-md: calc(var(--icon-size-offset) + var(--text-size-md));
+    --icon-size-lg: calc(var(--icon-size-offset) + var(--text-size-lg));
+    --icon-size-xl: calc(var(--icon-size-offset) + var(--text-size-xl));
 
 
-    /* ==========================================
-        04. SPACING
-       ========================================== */
+    /* 간격
+     ---------------------------------------------------------------------- */
     --spacing-unit: 4px;
 
     --spacing-none: calc(var(--spacing-unit) * 0);
 
     --spacing-3xs: calc(var(--spacing-unit) * 1);
     --spacing-2xs: calc(var(--spacing-unit) * 2);
-
     --spacing-xs: calc(var(--spacing-unit) * 3);
+
     --spacing-sm: calc(var(--spacing-unit) * 4);
     --spacing-md: calc(var(--spacing-unit) * 5);
     --spacing-lg: calc(var(--spacing-unit) * 6);
-    --spacing-xl: calc(var(--spacing-unit) * 7);
 
+    --spacing-xl: calc(var(--spacing-unit) * 7);
     --spacing-2xl: calc(var(--spacing-unit) * 8);
     --spacing-3xl: calc(var(--spacing-unit) * 9);
 
 
+    /* 크기
+     ---------------------------------------------------------------------- */
+    --size-unit: 14px;
 
-    /* ==========================================
-        05. IMAGE
-       ========================================== */
-    /* 프로필 및 로고 이미지 등 */
-    --avatar-size-sm: 32px;
-    --avatar-size-md: 48px;
-    --avatar-size-lg: 64px;
-    --avatar-size-xl: 96px;
+    --size-3xs: calc(var(--size-unit) * 2);
+    --size-2xs: calc(var(--size-unit) * 4);
+    --size-xs: calc(var(--size-unit) * 6);
 
-    /* 썸네일 및 카드 이미지 유형 */
-    --thumb-width-sm: 120px;
-    --thumb-width-md: 240px;
-    --thumb-width-lg: 360px;
-    --thumb-width-xl: 480px;
+    --size-sm: calc(var(--size-unit) * 8);
+    --size-md: calc(var(--size-unit) * 12);
+    --size-lg: calc(var(--size-unit) * 16);
 
-    /* 배너 이미지와 같이 화면 전체 또는 큰 영역 차지하는 이미지 */
-    --banner-height-sm: 200px;
-    --banner-height-md: 350px;
-    --banner-height-lg: 500px;
-    --banner-height-xl: 650px;
+    --size-xl: calc(var(--size-unit) * 20);
+    --size-2xl: calc(var(--size-unit) * 24);
+    --size-3xl: calc(var(--size-unit) * 32);
 
-    --avatar-aspect-ratio: 1 / 1;
-    --thumb-aspect-ratio: 16 / 9;
-    --banner-aspect-ratio: 4 / 3;
-
-    /* 부모 요소에 꽉 차제 맞추는 반응형 이미지 기본값 */
-    --img-fluid-width: 100%;
-    --img-fluid-height: auto;
-
-    --img-full-viewport: 100vw; /* 화면 가득 채우는 전체 화면 이미지 */
+    --size-full: 100%;
 
 
+    /* 이미지
+     ---------------------------------------------------------------------- */
+    --aspect-ratio-avatar: 1 / 1;
+    --aspect-ratio-thumb: 4 / 3;
+    --aspect-ratio-banner: 16 / 9;
+    --aspect-ratio-hero: 21 / 9;
 
-    /* ==========================================
-        06. BORDER
-       ========================================== */
+
+    /* 테두리
+     ---------------------------------------------------------------------- */
     --border-width-none: 0;
     --border-width-sm: 1px;
-    --border-width-md: 2px;
-    --border-width-lg: 4px;
+    --border-width-md: 3px;
+    --border-width-lg: 5px;
 
-    --radius-none: 0;
-    --radius-xs: 2px;
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
+    --border-radius-none: 0;
+    --border-radius-sm: 3px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 9px;
 
-    --radius-pilled: 9999px;
-    --radius-circled: 50%;
-
+    --border-radius-pill: 9999px;
+    --border-radius-circle: 50%;
 
 
-    /* ==========================================
-        07. SHADOW
-       ========================================== */
-    --color-box-shadow-rgb: 0, 0, 0;
-
-    --box-shadow-xs: 0px 1px 2px rgba(var(--color-box-shadow-rgb), 0.05);       /* 버튼, 폼 요소 등 */
-    --box-shadow-sm: 0px 2px 8px 0px rgba(var(--color-box-shadow-rgb), 0.1);    /* 카드, 작은 드롭다운 메뉴 */
-    --box-shadow-md: 0px 4px 12px rgba(var(--color-box-shadow-rgb), 0.15);      /* 일반적인 모달 및 팝 오버 */
-    --box-shadow-lg: 0px 12px 24px rgba(var(--color-box-shadow-rgb), 0.2);      /* 대형 모달, 공중 부양된 고정 배너 등 */
-
-    --box-shadow-inset: inset 1px ;
-
-
-
-    /* ==========================================
-        09. ANIMATION
-       ========================================== */
-    --duration-fast: 0.15s;     /* 마우스 호버, 버튼 클릭 등 사용자의 행동에 즉각적인 피드백이 필요한 경우 */
-    --duration-normal: 0.2s;    /* 드롭다운 메노, 토글 스위치등의 약간의 부드러운 움직임 변화 */
-    --duration-slow: 0.3s;      /* 덩치가 큰 UI 요소가 화면에 진입 및 퇴장할 때 */
-
-    --timing-linear: linear;        /* 처음부터 끝까지 동일한 속도 : 약간의 변화 및 계속 돌아가야 하는 컴포넌트 및 아이콘에만 제한적으로 사용*/
-    --timing-ease: ease;            /* 기본값 */
-    --timing-ease-in: ease-in;      /* 느리게 시작해 끝날때 빨라짐, 화면의 컴포넌트가 사라지거나 퇴장할 때 */
-    --timing-ease-out: ease-out;    /* 빠르게 시작해 끝날때 서서히 멈춤. */
-    --timing-ease-in-out: ease-in-out;  /* 시작과 끝은 느리게, 중간은 빠르게 */
-
-
-
-    /* ==========================================
-        10. OPACITY
-       ========================================== */
-    /* 수치가 작을수록 투명도는 증가 */
+    /* 불투명도
+     ---------------------------------------------------------------------- */
+    --opacity-subtle: 0.1;
     --opacity-weak: 0.25;
     --opacity-strong: 0.5;
     --opacity-heavy: 0.75;
+
+
+    /* 그림자
+     ---------------------------------------------------------------------- */
+    --shadow-sm: rgba(42, 42, 45, 0.1) 0px 1px 3px 0px, rgba(42, 42, 45, 0.06) 0px 1px 2px 0px;
+    --shadow-md: rgba(42, 42, 45, 0.1) 0px 4px 6px -1px, rgba(42, 42, 45, 0.06) 0px 2px 4px -1px;
+    --shadow-lg: rgba(42, 42, 45, 0.1) 0px 10px 15px -3px, rgba(42, 42, 45, 0.05) 0px 4px 6px -2px;
+
+
+    /* 모션
+     ---------------------------------------------------------------------- */
+    --transition-duration-fast: 0.15s;
+    --transition-duration-normal: 0.2s;
+    --transition-duration-slow: 0.3s;
+
+    --transition-timing-func-ease: ease;
+    --transition-timing-func-in: ease-in;
+    --transition-timing-func-out: ease-out;
+    --transition-timing-func-in-out: ease-in-out;
 }
 
 
-
 /**
- *  # 웹 브라우저 초기화 코드
+ * 03. 브라우저 초기화 코드
  */
 *,
 *::before,
 *::after {
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background-repeat: no-repeat;
 }
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, a, pre, i, small, strong, pre, p, ol, ul, li,
-header, nav, menu, section, article, aside, footer, code, iframe, canvas, img, svg, video,
-form, fieldset, legend, label, table, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+pre,
+hr,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
     border: 0;
-    vertical-align: baseline;
 }
 
-header, nav, section, aside, article, footer, figure, picture, img, svg, canvas, video,
-iframe, ul, ol, li, p, table, th, td, div, h1, h2, h3, h4, h5, h6, form, fieldset, legend {
+p,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+fieldset,
+legend {
     display: block;
-    overflow-wrap: break-word;
-    word-break: keep-all;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, span, strong, b, em, label, li {
-    transform: var(--text-rendering-fixed);
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: 100%;
     font-weight: normal;
 }
 
-strong, code, span, em, i, b, p {
-    display: inline-block;
+header,
+hgroup,
+aside,
+figure,
+section,
+main,
+article {
+    display: block;
 }
 
-q::before,
-q::after,
-blockquote::before,
-blockquote::after {
+img,
+svg,
+video,
+canvas,
+iframe,
+picture {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
+}
+
+i,
+code {
+    display: inline-block;
 }
 
 ol,
@@ -423,26 +408,15 @@ ul {
     list-style: none;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+q,
+blockquote {
+    quotes: none;
 }
 
-table td,
-table th {
-    padding: 0;
-    vertical-align: top;
-}
-
-td:not([align]),
-th:not([align]) {
-    text-align: inherit;
-}
-
-img,
-video{
-    height: auto;
-    max-width: 100%;
+code,
+pre {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -451,17 +425,31 @@ fieldset {
     background: none;
 }
 
+table td,
+table th {
+    padding: 0;
+    vertical-align: top;
+}
+
+table td:not([align]),
+table th:not([align]) {
+    text-align: inherit;
+}
+
+button,
 input,
-textarea,
 select,
-button {
+textarea {
     display: inline-flex;
     position: relative;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin: 0;
     border: none;
     background: none;
+    font-family: inherit;
+    font-size: inherit;
     outline: 1px solid transparent;
     outline-offset: -1px;
 }
@@ -479,22 +467,35 @@ input[type=radio] {
     vertical-align: baseline;
 }
 
-select::-ms-expand {
-    display: none;
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
 
-body,
-input,
-select,
-optgroup,
-textarea {
-    font-family: var(--font-family-body);
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
-button {
+body {
+    overflow-wrap: break-word;
+    font-family: var(--font-family-primary);
     font-weight: var(--font-weight-medium);
-    text-align: center;
-    white-space: nowrap;
+    font-size: var(--text-size-base);
+    word-break: keep-all;
+    vertical-align: baseline;
+    color: var(--color-text);
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 hr {
@@ -502,15 +503,13 @@ hr {
     border: none;
 }
 
-legend {
-    overflow: hidden;
-    position: absolute;
-    left: -9999px;
-    font-size: 0;
-}
-
 iframe {
     border: 0;
+}
+
+svg {
+    height: auto;
+    width: auto;
 }
 
 i {
@@ -521,22 +520,27 @@ a {
     text-decoration: none;
 }
 
-label {
-    display: inline-block;
+code {
+    font-family: Consolas, Monaco, monospace;
+    padding: 2px 5px;
+    background-color: var(--slate-100);
+    border-radius: var(--border-radius-sm);
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
+pre {
+    display: block;
+    overflow-x: auto;
+    padding: var(--spacing-sm);
+    background-color: var(--gray-900);
+    border-radius: var(--border-radius-md);
 }
 
-html {
-    background-color: var(--color-background);
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    text-size-adjust: none;
+pre code {
+    padding: 0;
+    background-color: transparent;
+    color: var(--gray-100);
+}
+
+select::-ms-expand {
+    display: none;
 }

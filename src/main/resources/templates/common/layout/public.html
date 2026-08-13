@@ -7,17 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title layout:title-pattern="$LAYOUT_TITLE $CONTENT_TITLE">네피아</title>
-    <th:block th:replace="~{common/layout/fragments/headLibs :: headLibs}"/>
+    <!-- 공통/전역 스타일시트 -->
+    <th:block th:replace="~{common/layout/fragments/headLib :: headLibs}"/>
 </head>
 <body>
+    <!-- 최상위 레이아웃 -->
     <div class="app">
-        <div class="container is-flex-centered">
+        <!-- 중단 영역 -->
+        <div class="container is-flex-center">
+            <!-- 메인 컨텐츠 영역 -->
             <main class="contents">
                 <th:block layout:fragment="page-content"/>
             </main>
         </div>
     </div>
-    <!-- script section -->
-    <th:block th:replace="~{common/layout/fragments/scripts :: scripts}"/>
+
+    <!-- 공통 스크립트 -->
+    <th:block th:replace="~{common/layout/fragments/script :: scripts}"/>
+    <!-- 페이지별 스크립트 -->
     <th:block layout:fragment="page-script"/>
 </body>
+</html>

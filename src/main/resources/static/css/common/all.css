@@ -6,6 +6,202 @@
  * nepia v1.0 | (c) 2026. suviny All Rights Reserved. | https://github.com/suviny/nepia
  */
 
+/* 컴포넌트 디자인 토큰 */
+:root {
+    --control-height: 42px;
+    --control-padding-horizontal: var(--spacing-xs);
+    --control-padding-vertical: calc(var(--control-padding-horizontal) - 2px);
+    --control-line-height: var(--line-height-sm);
+    --control-border-color: var(--color-border);
+    --control-background-color: var(--color-background-light);
+}
+
+
+
+/**
+ * 01. 이미지
+ */
+.has-img {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* 이미지 유형별 크기
+ ---------------------------------------------------------------------- */
+.has-img.is-avatar-sm {
+    max-width: var(--size-3xs);
+}
+
+.has-img.is-avatar-md {
+    max-width: var(--size-2xs);
+}
+
+.has-img.is-avatar-lg {
+    max-width: var(--size-xs);
+}
+
+.has-img.is-thumb-sm {
+    max-width: var(--size-sm);
+}
+
+.has-img.is-thumb-md {
+    max-width: var(--size-md);
+}
+
+.has-img.is-thumb-lg {
+    max-width: var(--size-lg);
+}
+
+.has-img.is-banner-sm {
+    max-width: var(--size-xl);
+}
+
+.has-img.is-banner-md {
+    max-width: var(--size-2xl);
+}
+
+.has-img.is-banner-lg {
+    max-width: var(--size-3xl);
+}
+
+
+
+/**
+ * 02. 구분선
+ */
+.divider {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    color: var(--color-text-muted);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex-grow: 1;
+    height: var(--border-width-sm);
+    background-color: var(--color-border);
+    font-size: 0;
+    line-height: var(--line-height-none);
+}
+
+.divider::before {
+    margin-right: var(--spacing-2xs);
+    margin-left: var(--spacing-none);
+}
+
+.divider::after {
+    margin-right: var(--spacing-none);
+    margin-left: var(--spacing-2xs);
+}
+
+
+
+/**
+ * 03. 폼
+ */
+/* 폼 컴포넌트 디자인 토큰
+ ---------------------------------------------------------------------- */
+.control,
+.label,
+.input,
+.textarea,
+.select {}
+
+
+
+
+/* 폼 요소
+ ---------------------------------------------------------------------- */
+/*  */
+.label {
+    display: block;
+    position: relative;
+    margin-bottom: var(--form-element-spacing-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--control-line-height);
+    color: var(--form-element-label-color);
+}
+
+.label.is-required {
+    content: "*";
+    position: absolute;
+    margin-left: var(--form-element-spacing-sm);
+    font-size: var(--text-size-xs);
+    color: var(--form-element-required-color);
+}
+
+/*  */
+.input,
+.select select,
+.textarea {
+    width: var(--size-full);
+    border: var(--border-width-sm) solid var(--control-border-color);
+    background-color: var(--control-background-color);
+    color: var(--color-text);
+}
+
+
+.input,
+.select select {
+    height: var(--control-height);
+    padding: var(--form-element-padding);
+}
+
+.input:focus,
+.select:focus-within {
+    border-color: var(--form-element-border-focus-color);
+}
+
+.input::placeholder {
+    color: var(--form-element-placeholder-color);
+}
+
+.select {
+    display: inline-flex;
+    position: relative;
+}
+
+.select select {
+    padding-inline-end: var(--form-element-indent-padding);
+    background-image: url("/images/form/ico-select-arrow-down-filled.svg");
+    background-repeat: no-repeat;
+    background-position: right var(--form-element-spacing-md) center;
+    background-size: var(--icon-size-sm);
+    white-space: nowrap;
+}
+
+.help {
+    display: inline-block;
+    font-size: var(--form-element-helper-size);
+    vertical-align: middle;
+    color: var(--form-element-text-helper-color);
+}
+
+* ~ .help {
+    margin-top: var(--form-element-spacing-sm);
+}
+
+
+/* 폼 내부 레이아웃
+ ---------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
 
 
 

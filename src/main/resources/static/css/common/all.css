@@ -112,7 +112,22 @@
 .label,
 .input,
 .textarea,
-.select {}
+.select {
+    --form-element-spacing-sm: calc(var(--spacing-3xs) - 2px);
+    --form-element-spacing-md: calc(var(--spacing-sm) - 2px);
+    --form-element-spacing-lg: calc(var(--spacing-md) - 2px);
+    --form-element-padding: var(--control-padding-vertical) var(--control-padding-horizontal);
+    --form-element-indent-padding: var(--spacing-2xl);
+
+    --form-element-helper-size: var(--text-size-sm);
+
+    --form-element-border-focus-color: var(--color-primary);
+    --form-element-label-color: var(--color-text-strong);
+    --form-element-required-color: var(--color-secondary);
+    --form-element-placeholder-color: var(--gray-400);
+    --form-element-text-helper-color: var(--color-text-muted);
+
+}
 
 
 
@@ -166,6 +181,7 @@
 .select {
     display: inline-flex;
     position: relative;
+    width: var(--size-full);
 }
 
 .select select {
@@ -191,9 +207,41 @@
 
 /* 폼 내부 레이아웃
  ---------------------------------------------------------------------- */
+/*  */
+.field-container,
+.field {
+    display: flex;
+    flex-direction: column;
+    width: var(--size-full);
+}
 
+.field-container:not(:last-child) {
+    margin-bottom: var(--form-element-spacing-lg);
+}
 
+.field:not(:last-child) {
+    margin-bottom: var(--form-element-spacing-md);
+}
 
+/*  */
+.control {
+    flex: 1 1 0;
+    position: relative;
+    min-width: 0;
+    clear: both;
+}
+
+.control:focus-within {
+    z-index: 1;
+}
+
+.control.is-expanded {
+    flex-grow: 2;
+}
+
+.control:not(.is-expanded) {
+    flex: 0 0 auto;
+}
 
 
 

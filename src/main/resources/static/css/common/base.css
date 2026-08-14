@@ -50,6 +50,7 @@
 }
 
 
+
 /**
  * 02. 전역 디자인 변수
  */
@@ -302,6 +303,7 @@
     --transition-timing-func-out: ease-out;
     --transition-timing-func-in-out: ease-in-out;
 }
+
 
 
 /**

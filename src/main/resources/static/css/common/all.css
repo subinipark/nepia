@@ -1,25 +1,56 @@
 @charset "UTF-8";
 
 /*! 
- * 파일에 대한 설명
+ * 타이포그래피, 미디어, UI 컴포넌트 및 공통 레이아웃 등을 정의한 스타일시트
  *
- * nepia v1.0 | (c) 2026. suviny All Rights Reserved. | https://github.com/suviny/nepia
+ * nepia 1.0 | (c) 2026. suviny All Rights Reserved. | https://github.com/suviny/nepia
  */
 
-/* 컴포넌트 디자인 토큰 */
+/* 컨트롤 요소 컴포넌트 속성 */
 :root {
-    --control-height: 42px;
+    --control-width: var(--size-full);
+    --control-height: 40px;
     --control-padding-horizontal: var(--spacing-xs);
     --control-padding-vertical: calc(var(--control-padding-horizontal) - 2px);
+    --control-icon-size: var(--icon-size-xs);
+    --control-border-radius: var(--border-radius-sm);
     --control-line-height: var(--line-height-sm);
+
     --control-border-color: var(--color-border);
+    --control-border-focus-color: var(--color-primary);
     --control-background-color: var(--color-background-light);
 }
 
 
 
 /**
- * 01. 이미지
+ * 01. 페이지 타이틀
+ */
+.title,
+.subtitle {
+    display: block;
+    font-family: var(--font-family-primary);
+    letter-spacing: var(--letter-spacing-tighter);
+    line-height: var(--line-height-md);
+    vertical-align: baseline;
+}
+
+.title {
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--text-size-lg);
+    color: var(--color-text-strong);
+}
+
+.subtitle {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-size-base);
+    color: var(--color-text-muted);
+}
+
+
+
+/**
+ * 02. 이미지
  */
 .has-img {
     display: block;
@@ -28,7 +59,7 @@
 }
 
 
-/* 이미지 유형별 크기
+/* 유형별 크기
  ---------------------------------------------------------------------- */
 .has-img.is-avatar-sm {
     max-width: var(--size-3xs);
@@ -69,7 +100,7 @@
 
 
 /**
- * 02. 구분선
+ * 03. 구분선
  */
 .divider {
     display: flex;
@@ -104,64 +135,215 @@
 
 
 /**
- * 03. 폼
+ * 04. 버튼
  */
-/* 폼 컴포넌트 디자인 토큰
+/* 버튼 전용 컴포넌트 속성
+ ---------------------------------------------------------------------- */
+.button {
+    --button-min-width: var(--size-xs);
+    --button-height: var(--control-height);
+    --button-content-gap: var(--spacing-sm);
+    --button-padding: var(--control-padding-vertical) var(--spacing-none);
+
+    --button-border-color: var(--control-border-color);
+    --button-background-color: var(--control-background-color);
+    --button-text-color: var(--color-text-strong);
+}
+
+
+/* 기본 스타일
+ ---------------------------------------------------------------------- */
+.button {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--button-min-width);
+    height: var(--button-height);
+    padding: var(--button-padding);
+    gap: var(--button-content-gap);
+    border: var(--border-width-sm) solid var(--button-border-color);
+    border-radius: var(--control-border-radius);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    line-height: var(--control-line-height);
+}
+
+.button:hover {
+    --button-background-color: var(--color-background);
+}
+
+
+/* 색상 별 스타일
+ ---------------------------------------------------------------------- */
+.button.is-primary {
+    --button-border-color: var(--color-primary);
+    --button-background-color: var(--color-primary);
+    --button-text-color: var(--color-text-on);
+}
+
+.button.is-primary:hover {
+    --button-border-color: var(--color-primary-dark);
+    --button-background-color: var(--color-primary-dark);
+}
+
+.button.is-secondary {
+    --button-border-color: var(--color-secondary);
+    --button-background-color: var(--color-secondary);
+    --button-text-color: var(--color-text-on);
+}
+
+.button.is-secondary:hover {
+    --button-border-color: var(--color-secondary-dark);
+    --button-background-color: var(--color-secondary-dark);
+}
+
+.button.is-dark {
+    --button-border-color: var(--color-background-dark);
+    --button-background-color: var(--color-background-dark);
+    --button-text-color: var(--color-text-on);
+}
+
+.button.is-dark:hover {
+    --button-border-color: var(--gray-900);
+    --button-background-color: var(--gray-900);
+}
+
+
+/* 변형
+ ---------------------------------------------------------------------- */
+.button.is-primary.is-outlined {
+    --button-background-color: var(--color-background-light);
+    --button-text-color: var(--color-primary);
+}
+
+.button.is-primary.is-outlined:hover {
+    --button-background-color: var(--color-primary);
+    --button-text-color: var(--color-text-on);
+}
+
+.button.is-secondary.is-outlined {
+    --button-background-color: var(--color-background-light);
+    --button-text-color: var(--color-secondary);
+}
+
+.button.is-secondary.is-outlined:hover {
+    --button-background-color: var(--color-secondary);
+    --button-text-color: var(--color-text-on);
+}
+
+.button.is-dark.is-outlined {
+    --button-background-color: var(--color-background-light);
+    --button-text-color: var(--color-background-dark);
+}
+
+.button.is-dark.is-outlined:hover {
+    --button-background-color: var(--color-background-dark);
+    --button-text-color: var(--color-text-on);
+}
+
+
+/* 소셜 버튼
+ ---------------------------------------------------------------------- */
+.button.is-kakao img,
+.button.is-kakao svg,
+.button.is-google-light img,
+.button.is-google-light svg {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button.is-kakao {
+    --button-border-color: #FEE500;
+    --button-background-color: #FEE500;
+    --button-text-color: var(--color-text);
+}
+
+.button.is-google-light {
+    --button-border-color: #747775;
+    --button-background-color: var(--color-background-light);
+    --button-text-color: #1F1F1F;
+}
+
+
+/* 아이콘 버튼
+ ---------------------------------------------------------------------- */
+.button .icon {
+    display: block;
+    flex-shrink: 0;
+    line-height: var(--control-line-height);
+}
+
+.button .icon > img,
+.button .icon > svg {
+    width: var(--control-icon-size);
+    height: auto;
+    aspect-ratio: var(--aspect-ratio-avatar);
+}
+
+.button .icon > i {
+    font-size: var(--control-icon-size);
+}
+
+.button.is-icon-only {
+    align-self: flex-start;
+    min-width: 0;
+    padding: var(--spacing-none);
+    aspect-ratio: var(--aspect-ratio-avatar);
+}
+
+
+
+/**
+ * 05. 폼 내부 요소 및 레이아웃
+ */
+/* 폼 필드 전용 컴포넌트 속성
  ---------------------------------------------------------------------- */
 .control,
 .label,
 .input,
 .textarea,
 .select {
-    --form-element-spacing-sm: calc(var(--spacing-3xs) - 2px);
-    --form-element-spacing-md: calc(var(--spacing-sm) - 2px);
-    --form-element-spacing-lg: calc(var(--spacing-md) - 2px);
     --form-element-padding: var(--control-padding-vertical) var(--control-padding-horizontal);
     --form-element-indent-padding: var(--spacing-2xl);
+    --form-element-help-size: var(--text-size-sm);
+    --form-element-border-radius: var(--control-border-radius);
 
-    --form-element-helper-size: var(--text-size-sm);
-
-    --form-element-border-focus-color: var(--color-primary);
     --form-element-label-color: var(--color-text-strong);
     --form-element-required-color: var(--color-secondary);
     --form-element-placeholder-color: var(--gray-400);
-    --form-element-text-helper-color: var(--color-text-muted);
-
+    --form-element-help-color: var(--color-text-muted);
 }
 
 
-
-
-/* 폼 요소
+/* 폼 필드 요소
  ---------------------------------------------------------------------- */
-/*  */
 .label {
     display: block;
     position: relative;
-    margin-bottom: var(--form-element-spacing-sm);
-    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-3xs);
+    font-weight: var(--font-weight-extrabold);
     line-height: var(--control-line-height);
     color: var(--form-element-label-color);
 }
 
 .label.is-required {
-    content: "*";
+    content: '*';
     position: absolute;
-    margin-left: var(--form-element-spacing-sm);
+    margin-left: var(--spacing-3xs);
     font-size: var(--text-size-xs);
     color: var(--form-element-required-color);
 }
 
-/*  */
 .input,
 .select select,
 .textarea {
-    width: var(--size-full);
+    width: var(--control-width);
     border: var(--border-width-sm) solid var(--control-border-color);
-    background-color: var(--control-background-color);
+    background-color: var(--color-background-light);
     color: var(--color-text);
 }
-
 
 .input,
 .select select {
@@ -171,7 +353,7 @@
 
 .input:focus,
 .select:focus-within {
-    border-color: var(--form-element-border-focus-color);
+    border-color: var(--control-border-focus-color);
 }
 
 .input::placeholder {
@@ -181,54 +363,59 @@
 .select {
     display: inline-flex;
     position: relative;
-    width: var(--size-full);
+    width: var(--control-width);
 }
 
 .select select {
     padding-inline-end: var(--form-element-indent-padding);
     background-image: url("/images/form/ico-select-arrow-down-filled.svg");
     background-repeat: no-repeat;
-    background-position: right var(--form-element-spacing-md) center;
-    background-size: var(--icon-size-sm);
+    background-position: right var(--spacing-sm) center;
+    background-size: var(--control-icon-size);
     white-space: nowrap;
 }
 
 .help {
     display: inline-block;
-    font-size: var(--form-element-helper-size);
+    font-size: var(--form-element-help-size);
     vertical-align: middle;
-    color: var(--form-element-text-helper-color);
+    color: var(--form-element-help-color);
 }
 
 * ~ .help {
-    margin-top: var(--form-element-spacing-sm);
+    margin-top: var(--spacing-3xs);
 }
 
 
-/* 폼 내부 레이아웃
+/* 폼 필드 레이아웃
  ---------------------------------------------------------------------- */
-/*  */
 .field-container,
 .field {
     display: flex;
     flex-direction: column;
-    width: var(--size-full);
+    width: 100%;
 }
 
 .field-container:not(:last-child) {
-    margin-bottom: var(--form-element-spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .field:not(:last-child) {
-    margin-bottom: var(--form-element-spacing-md);
+    margin-bottom: var(--spacing-xs);
 }
 
-/*  */
 .control {
-    flex: 1 1 0;
+    flex: 0 0 auto;
     position: relative;
     min-width: 0;
     clear: both;
+}
+
+.control .button,
+.control .input,
+.control .select,
+.control .textarea {
+    width: 100%;
 }
 
 .control:focus-within {
@@ -236,22 +423,158 @@
 }
 
 .control.is-expanded {
-    flex-grow: 2;
+    flex: 1 1 0;
 }
 
-.control:not(.is-expanded) {
-    flex: 0 0 auto;
+.field .is-grouped,
+.field .has-inline,
+.field .has-addons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.field .is-grouped {
+    gap: var(--spacing-xs);
+}
+
+.field .is-grouped > .control {
+    flex-shrink: 0;
+}
+
+.field .has-inline {
+    gap: var(--spacing-3xs);
+}
+
+.field .has-inline .is-static,
+.field .has-addons .is-static {
+    pointer-events: none;
+}
+
+.field .has-inline .is-static {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field .has-addons {
+    gap: var(--spacing-none);
+}
+
+.field .has-addons .control:not(:last-child) {
+    margin-inline-end: -1px;
+}
+
+.field .has-addons .control:first-child:not(:only-child) .input,
+.field .has-addons .control:first-child:not(:only-child) .select,
+.field .has-addons .control:first-child:not(:only-child) .button {
+    border-start-end-radius: var(--border-radius-none);
+    border-end-end-radius: var(--border-radius-none);
+}
+
+.field .has-addons .control:not(:first-child):not(:last-child) .input,
+.field .has-addons .control:not(:first-child):not(:last-child) .select,
+.field .has-addons .control:not(:first-child):not(:last-child) .button {
+    border-radius: var(--border-radius-none);
+}
+
+.field .has-addons .control:last-child:not(:only-child) .input,
+.field .has-addons .control:last-child:not(:only-child) .select,
+.field .has-addons .control:last-child:not(:only-child) .button {
+    border-start-start-radius: var(--border-radius-none);
+    border-end-start-radius: var(--border-radius-none);
+}
+
+.field .has-addons .is-static {
+    border: var(--border-width-sm) solid var(--control-border-color);
+    background-color: var(--color-background);
+    color: var(--color-text-muted);
 }
 
 
 
+/**
+ * 06. 패널 & 탭
+ */
+/* 패널 전용 컴포넌트 속성
+ ---------------------------------------------------------------------- */
+.panel {
+    --panel-content-spacing: var(--spacing-2xl);
+    --panel-border-radius: var(--border-radius-md);
+
+    --panel-background-color: var(--color-background-light);
+
+    --panel-heading-family: var(--font-family-secondary);
+    --panel-heading-size: var(--text-size-lg);
+    --panel-subheading-size: var(--text-size-md);
+    --panel-heading-color: var(--color-text-strong);
+    --panel-subheading-color: var(--color-text-muted);
+    --panel-heading-line-height: 1.125;
+    --panel-subheading-line-height: 1.25;
+    --panel-body-line-height: var(--line-height-lg);
+}
+
+
+/* 패널
+ ---------------------------------------------------------------------- */
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--panel-content-spacing);
+    padding: var(--panel-content-spacing);
+    border: var(--border-width-sm) solid var(--color-border);
+    border-radius: var(--panel-border-radius);
+    background-color: var(--panel-background-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.panel .panel-header .panel-heading,
+.panel .panel-header .panel-subheading {
+    display: block;
+}
+
+.panel .panel-header .panel-heading {
+    font-family: var(--panel-heading-family);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--panel-heading-size);
+    line-height: var(--panel-heading-line-height);
+    color: var(--panel-heading-color);
+}
+
+.panel .panel-header .panel-subheading {
+    font-size: var(--panel-subheading-size);
+    line-height: var(--panel-subheading-line-height);
+    color: var(--panel-subheading-color);
+}
+
+.panel .panel-header .panel-heading + .panel .panel-header .panel-subheading {
+    margin-top: var(--spacing-2xs);
+}
+
+.panel .panel-body {
+    line-height: var(--panel-body-line-height);
+}
 
 
 
+/**
+ * 07. 공통 레이아웃
+ */
+.app {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
+.container {
+    display: flex;
+    flex: 1;
+}
 
-
-
-
-
-
+.contents {
+    padding: var(--spacing-xs);
+}

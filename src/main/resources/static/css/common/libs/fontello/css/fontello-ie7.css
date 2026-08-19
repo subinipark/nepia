@@ -167,6 +167,7 @@
 .icon-chrome-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe89a;&nbsp;'); }
 .icon-opera-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe89b;&nbsp;'); }
 .icon-ie { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe89c;&nbsp;'); }
+.icon-nepia { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe89d;&nbsp;'); }
 .icon-link-ext { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf08e;&nbsp;'); }
 .icon-check-empty { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf096;&nbsp;'); }
 .icon-bookmark-empty { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf097;&nbsp;'); }

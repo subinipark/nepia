@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*! 
- * 파일에 대한 설명
+ * 프로젝트 전역에서 사용될 유틸리티 클래스들을 정의한 스타일시트
  *
- * nepia v1.0 | (c) 2026. suviny All Rights Reserved. | https://github.com/suviny/nepia
+ * nepia 1.0 | (c) 2026. suviny All Rights Reserved. | https://github.com/suviny/nepia
  */
 
 /**
@@ -616,11 +616,6 @@
     white-space: nowrap !important;
 }
 
-.is-underline {
-    text-decoration: underline !important;
-    text-decoration-color: transparent;
-    transition: text-decoration-color var(--transition-duration-fast) var(--transition-timing-func-ease);
-}
 .is-underline:hover {
-    text-decoration-color: currentColor !important;
+    text-decoration: underline !important;
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/public}">
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/css/pages/user.css">
+</head>
+<div class="signup-container" layout:fragment="page-content">
+    <section class="panel">
+        <header class="panel-header">
+            <h1 class="title">회원가입</h1>
+        </header>
+        <div class="panel-body">
+            <form id="signup-form">
+                <div class="field-container">
+                    <div class="field">
+                        <label for="email" class="label">이메일</label>
+                        <div class="has-inline">
+                            <div class="control is-expanded">
+                                <input type="text" name="email" id="email" class="input" autocomplete="off" autofocus>
+                            </div>
+                            <div class="control">
+                                <button type="button" id="exists-email-btn" class="button is-primary is-outlined" disabled>중복 확인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="password" class="label">비밀번호</label>
+                        <div class="control">
+                            <input type="password" name="password" id="password" class="input" autocomplete="off">
+                        </div>
+                        <small class="help">영문과 숫자, 특수문자를 모두 포함한 8~20자</small>
+                    </div>
+                    <div class="field">
+                        <label for="password-confirm" class="label">비밀번호 확인</label>
+                        <div class="control">
+                            <input type="password" name="passwordConfirm" id="password-confirm" class="input" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="nickname" class="label">닉네임</label>
+                        <div class="has-inline">
+                            <div class="control is-expanded">
+                                <input type="text" name="nickname" id="nickname" class="input" autocomplete="off">
+                            </div>
+                            <div class="control">
+                                <button type="button" id="exists-nickname-btn" class="button is-primary is-outlined" disabled>중복 확인</button>
+                            </div>
+                        </div>
+                        <small class="help">영문과 숫자를 모두 포함한 3~20자</small>
+                    </div>
+                    <div class="field">
+                        <label for="name" class="label">이름</label>
+                        <div class="control">
+                            <input type="text" name="name" id="name" class="input" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field-container">
+                    <div class="field">
+                        <button type="button" id="signup-btn" class="button is-primary" disabled>가입하기</button>
+                    </div>
+                    <div class="field is-flex-row is-justify-content-center has-text-muted">
+                        이미 가입된 계정이 있으신가요?&nbsp;<a href="/" class="has-text-emphasis is-underline">로그인</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<th:block layout:fragment="page-script">
+</th:block>
+</html>

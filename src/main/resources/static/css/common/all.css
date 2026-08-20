@@ -9,7 +9,7 @@
 /* 컨트롤 요소 컴포넌트 속성 */
 :root {
     --control-width: var(--size-full);
-    --control-height: 40px;
+    --control-height: 42px;
     --control-padding-horizontal: var(--spacing-xs);
     --control-padding-vertical: calc(var(--control-padding-horizontal) - 2px);
     --control-icon-size: var(--icon-size-xs);
@@ -242,31 +242,6 @@
 }
 
 
-/* 소셜 버튼
- ---------------------------------------------------------------------- */
-.button.is-kakao img,
-.button.is-kakao svg,
-.button.is-google-light img,
-.button.is-google-light svg {
-    position: absolute;
-    left: var(--spacing-sm);
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.button.is-kakao {
-    --button-border-color: #FEE500;
-    --button-background-color: #FEE500;
-    --button-text-color: var(--color-text);
-}
-
-.button.is-google-light {
-    --button-border-color: #747775;
-    --button-background-color: var(--color-background-light);
-    --button-text-color: #1F1F1F;
-}
-
-
 /* 아이콘 버튼
  ---------------------------------------------------------------------- */
 .button .icon {
@@ -291,6 +266,46 @@
     min-width: 0;
     padding: var(--spacing-none);
     aspect-ratio: var(--aspect-ratio-avatar);
+}
+
+
+/* 소셜 버튼
+ ---------------------------------------------------------------------- */
+.button.is-kakao span.icon img,
+.button.is-kakao span.icon svg,
+.button.is-google-light span.icon img,
+.button.is-google-light span.icon svg {
+    width: calc(var(--control-icon-size) + 3px);
+}
+
+.button.is-kakao span:not(.icon),
+.button.is-google-light span:not(.icon) {
+    font-family: inherit;
+    font-weight: var(--font-weight-medium);
+    font-size: inherit;
+    color: var(--button-text-color);
+}
+
+.button.is-kakao img,
+.button.is-kakao svg,
+.button.is-google-light img,
+.button.is-google-light svg {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button.is-kakao {
+    --button-border-color: #FEE500;
+    --button-background-color: #FEE500;
+    --button-text-color: var(--color-text);
+}
+
+.button.is-google-light {
+    --button-border-color: #747775;
+    --button-background-color: var(--color-background-light);
+    --button-text-color: #1F1F1F;
 }
 
 
@@ -341,6 +356,7 @@
 .textarea {
     width: var(--control-width);
     border: var(--border-width-sm) solid var(--control-border-color);
+    border-radius: var(--control-border-radius);
     background-color: var(--color-background-light);
     color: var(--color-text);
 }
@@ -524,7 +540,7 @@
     flex-direction: column;
     gap: var(--panel-content-spacing);
     padding: var(--panel-content-spacing);
-    border: var(--border-width-sm) solid var(--color-border);
+    /*border: var(--border-width-sm) solid var(--color-border);*/
     border-radius: var(--panel-border-radius);
     background-color: var(--panel-background-color);
     box-shadow: var(--shadow-sm);

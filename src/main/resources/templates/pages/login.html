@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/public}">
+<head>
+    <title>로그인</title>
+    <link rel="stylesheet" href="/css/pages/user.css">
+</head>
+
+<div class="login-container" layout:fragment="page-content">
+    <section class="panel">
+        <header class="panel-header">
+            <div class="has-img is-avatar-md is-margin-auto">
+                <img src="/images/ico-app-logo.png" alt="애플리케이션 로고">
+            </div>
+        </header>
+        <div class="panel-body">
+            <form id="login-form">
+                <div class="field-container">
+                    <div class="field is-margin-bottom-1">
+                        <input type="text" name="email" id="login-email" class="input" placeholder="이메일" autocomplete="off" autofocus>
+                    </div>
+                    <div class="field is-margin-bottom-2">
+                        <input type="password" name="password" id="login-pwd" class="input" placeholder="비밀번호" autocomplete="off">
+                    </div>
+                    <div class="field is-flex-row">
+                        <a href="#" class="has-text-emphasis is-underline">비밀번호를 잊으셨나요?</a>
+                    </div>
+                </div>
+
+                <div class="field-container">
+                    <div class="field">
+                        <button type="button" id="login-btn" class="button is-primary" disabled>로그인</button>
+                    </div>
+                    <div class="has-text-center has-text-muted">
+                        혹시 회원이 아니신가요?&nbsp;<a href="/sign-up" class="has-text-emphasis is-underline">회원가입</a>
+                    </div>
+                </div>
+
+                <div class="divider is-margin-bottom-5">또는</div>
+
+                <div class="field-container">
+                    <div class="field">
+                        <button type="button" id="kakao-btn" class="button is-kakao">
+                            <span class="icon">
+                                <img src="/images/social/ico-kakao-24.svg" alt="카카오">
+                            </span>
+                            <span>카카오 계정으로 시작하기</span>
+                        </button>
+                    </div>
+                    <div class="field">
+                        <button type="button" id="google-btn" class="button is-google-light">
+                            <span class="icon">
+                                <img src="/images/social/ico-google-24.svg" alt="구글">
+                            </span>
+                            <span>구글 계정으로 시작하기</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<th:block layout:fragment="page-script">
+    <script src="/js/pages/login.js"></script>
+</th:block>
+</html>

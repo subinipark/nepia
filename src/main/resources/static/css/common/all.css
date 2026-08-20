@@ -328,7 +328,6 @@
     --form-element-label-color: var(--color-text-strong);
     --form-element-required-color: var(--color-secondary);
     --form-element-placeholder-color: var(--gray-400);
-    --form-element-help-color: var(--color-text-muted);
 }
 
 
@@ -395,7 +394,7 @@
     display: inline-block;
     font-size: var(--form-element-help-size);
     vertical-align: middle;
-    color: var(--form-element-help-color);
+    color: var(--color-text-muted);
 }
 
 * ~ .help {

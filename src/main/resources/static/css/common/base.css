@@ -453,6 +453,7 @@ textarea {
     background: none;
     font-family: inherit;
     font-size: inherit;
+    font-weight: inherit;
     outline: 1px solid transparent;
     outline-offset: -1px;
 }
